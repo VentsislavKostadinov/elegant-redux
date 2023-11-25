@@ -1,10 +1,10 @@
-export type CartItem = {
+export type CartItemProps = {
     id: string
     title: string
     price: number
     quantity: number
 }
 
-export type CartState = {
-    items: CartItem[]
+export type CartStateProps = {
+    items: CartItemProps[]
 }
