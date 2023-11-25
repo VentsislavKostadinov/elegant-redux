@@ -1,11 +1,11 @@
-import Header from './components/Header.tsx'
+import { Header } from './components/Header.tsx'
 import Shop from './components/Shop.tsx'
-import Product from './components/Product.tsx'
+import { Product } from './components/Product.tsx'
 import { DUMMY_PRODUCTS } from './dummy-products.ts'
 import { Provider } from 'react-redux'
 import { store } from './store/store.ts'
 
-function App() {
+export const App = () => {
     return (
         <Provider store={store}>
             <Header />
@@ -19,5 +19,3 @@ function App() {
         </Provider>
     )
 }
-
-export default App
