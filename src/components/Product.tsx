@@ -1,18 +1,25 @@
-type ProductProps = {
-    id: string
-    image: string
-    title: string
-    price: number
-    description: string
-}
+import { ProductProps } from '../model/ProductProps'
+import { addToCart } from '../store/cart-slice'
+import { useCartDispatch } from '../store/hooks'
 
-export default function Product({
+export const Product = ({
+    id,
     image,
     title,
     price,
     description,
-}: ProductProps) {
-    function handleAddToCart() {}
+}: ProductProps) => {
+    const dispatch = useCartDispatch()
+
+    const handleAddToCart = () => {
+        dispatch(
+            addToCart({
+                id,
+                title,
+                price,
+            }),
+        )
+    }
 
     return (
         <article className="product">
