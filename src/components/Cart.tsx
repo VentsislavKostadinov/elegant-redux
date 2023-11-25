@@ -1,6 +1,6 @@
 import { createPortal } from 'react-dom'
 
-import CartItems from './CartItems.tsx'
+import { CartItems } from './CartItems.tsx'
 
 type CartProps = {
     onClose: () => void
