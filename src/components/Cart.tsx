@@ -1,6 +1,7 @@
 import { createPortal } from 'react-dom'
 import { CartItems } from './CartItems.tsx'
 import { CartProps } from '../model/CartProps.ts'
+import './Cart.scss'
 
 export const Cart = ({ onClose }: CartProps) => {
     return createPortal(

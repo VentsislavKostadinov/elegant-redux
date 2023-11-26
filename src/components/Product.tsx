@@ -1,6 +1,7 @@
 import { ProductProps } from '../model/ProductProps'
 import { addToCart } from '../store/cart-slice'
 import { useCartDispatch } from '../store/hooks'
+import './Product.scss'
 
 export const Product = ({
     id,

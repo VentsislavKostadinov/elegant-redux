@@ -1,6 +1,7 @@
 import { useCartDispatch, useCartSelector } from '../store/hooks'
 import { CartItemProps } from '../store/redux-model/CartProps'
 import { addToCart, removeFromCart } from '../store/cart-slice'
+import './CartItems.scss'
 
 export const CartItems = () => {
     const cartItems = useCartSelector((state) => state.cart.items)
