@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useCartSelector } from '../store/hooks.ts'
 import { Cart } from './Cart.tsx'
+import './Header.scss'
 
 export const Header = () => {
     const [cartIsVisible, setCartIsVisible] = useState(false)
