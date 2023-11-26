@@ -1,12 +1,8 @@
 import { createPortal } from 'react-dom'
-
 import { CartItems } from './CartItems.tsx'
+import { CartProps } from '../model/CartProps.ts'
 
-type CartProps = {
-    onClose: () => void
-}
-
-export default function Cart({ onClose }: CartProps) {
+export const Cart = ({ onClose }: CartProps) => {
     return createPortal(
         <>
             <div className="cart-backdrop" />
