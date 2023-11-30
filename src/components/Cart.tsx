@@ -7,11 +7,13 @@ export const Cart = ({ onClose }: CartProps) => {
     return createPortal(
         <>
             <div className="cart-backdrop" />
-            <dialog id="cart-modal" open>
+            <dialog id="cart-modal" data-testid="cart-modal" open>
                 <h2>Your Cart</h2>
                 <CartItems />
                 <p id="cart-actions">
-                    <button onClick={onClose}>Close</button>
+                    <button data-testid="cart-button" onClick={onClose}>
+                        Close
+                    </button>
                 </p>
             </dialog>
         </>,
