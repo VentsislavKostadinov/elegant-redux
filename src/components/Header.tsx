@@ -20,13 +20,16 @@ export const Header = () => {
     return (
         <>
             {cartIsVisible && <Cart onClose={handleCloseCartClick} />}
-            <header id="main-header">
+            <header id="main-header" data-testid="main-header">
                 <div id="main-title">
                     <img src="logo.png" alt="Elegant model" />
-                    <h1>Elegant Redux</h1>
+                    <h1 data-testid="main-title">Elegant Redux</h1>
                 </div>
                 <p>
-                    <button onClick={handleOpenCartClick}>
+                    <button
+                        data-testid="header-cart-button"
+                        onClick={handleOpenCartClick}
+                    >
                         Cart {cartQuantity}
                     </button>
                 </p>
